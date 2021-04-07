@@ -12,6 +12,7 @@ pipeline {
         stage('Test') {
           steps {
             echo 'Hello Test'
+            echo '"The path for Chromedriver is ${ChromeExecutablePath}"'
           }
         }
 
@@ -24,5 +25,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    ChromeExecutablePath = '/Users/ricagarw/chromedriver.exe'
   }
 }
