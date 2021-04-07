@@ -30,7 +30,7 @@ pipeline {
 
     stage('Deploy') {
       when{
-        brach 'main'
+        branch 'main'
       }
       parallel {
         stage('Deploy') {
