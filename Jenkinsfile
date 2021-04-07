@@ -32,7 +32,7 @@ pipeline {
       parallel {
         stage('Deploy') {
           steps {
-            echo 'Deploying app in IIS server'
+            echo 'Deploying app in IIS server in develop branch'
           }
         }
 
