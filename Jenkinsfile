@@ -26,8 +26,19 @@ pipeline {
     }
 
     stage('Deploy') {
-      steps {
-        echo 'Deploying app in IIS server'
+      parallel {
+        stage('Deploy') {
+          steps {
+            echo 'Deploying app in IIS server'
+          }
+        }
+
+        stage('Artifact') {
+          steps {
+            archiveArtifacts 'TestLogTxtFile.txt'
+          }
+        }
+
       }
     }
 
