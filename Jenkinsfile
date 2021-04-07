@@ -29,6 +29,9 @@ pipeline {
     }
 
     stage('Deploy') {
+      when{
+        brach 'main'
+      }
       parallel {
         stage('Deploy') {
           steps {
