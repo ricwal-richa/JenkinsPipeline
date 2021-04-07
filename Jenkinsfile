@@ -17,8 +17,11 @@ pipeline {
         }
 
         stage('Test Log') {
+          environment {
+            TestVariable = 'Sometest'
+          }
           steps {
-            writeFile(file: 'TestLogTxtFile.txt', text: 'This is a test log file')
+            writeFile(file: 'TestLogTxtFile.txt', text: "This is a test log file with ${TestVariable}")
           }
         }
 
