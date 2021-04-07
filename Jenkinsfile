@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
           steps {
             echo 'Hello Test'
-            echo '"The path for Chromedriver is ${ChromeExecutablePath}"'
+            echo "The path for Chromedriver is ${ChromeExecutablePath}"
           }
         }
 
